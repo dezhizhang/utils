@@ -8,20 +8,14 @@ module.exports = {
     mode:'development',
     output:{
         path:path.resolve(__dirname,'dist'),
-        filename:'bundle.js',
+        filename:'[name].js',
+        libraryTarget:'umd',
+        library:'z-utils',
     },
     devServer:{
         host:'0.0.0.0',
         port:8082,
         open:false,
-        before(router) {
-            router.get('/success',function(req,res) {
-                res.json({id:1});
-            });
-            router.post('/error',function(req,res){
-                res.sendStatus(500);
-            });
-        },
         contentBase:path.resolve(__dirname,'dist')
     },
     plugins:[

@@ -1,8 +1,8 @@
 {
-  "name": "utils",
+  "name": "z-utils",
   "version": "1.0.0",
   "description": "utils",
-  "main": "index.js",
+  "main": "/dist/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build":"webpack",
@@ -15,8 +15,8 @@
     "start":"webpack-dev-server"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "zhangdezhi",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dezhizhang/utils/issues"
   },
