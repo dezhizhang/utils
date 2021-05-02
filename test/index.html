@@ -10,8 +10,8 @@
     <script src="../dist/utils.main.js"></script>
     <script>
         console.log('utils-lodash',utils);
-        let array = [1,2,3,4]
-        let res = utils.slice(array,1,4);
+        let array = [1,[2,[3,[4,[5]],]]]
+        let res = utils.flatten2(array);
         // let array = [1,2,3];
         // let array1 = [1,[2,[3,[4]]],5];
         // let res = utils.concat(array,array1);
