@@ -12,4 +12,5 @@ export { bind } from './function/bind';
 export { unique1,unique2,unique3 } from './array/unique';
 export { concat } from './array/concat'; 
 export { slice } from './array/slice';
+export { map } from './array/map'
 export { flatten1,flatten2 } from './array/flatten'

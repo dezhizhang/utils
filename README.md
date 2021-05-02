@@ -105,6 +105,18 @@ export function flatten2(array) {
     return arr;
 }
 ```
+### 数组的map方法
+- 返回一个新的数组
+```
+export function map(array,callback) {
+    const arr = [];
+    for(let i=0;i < array.length;i++) {
+        let result = callback(array[i],i);
+        arr.push(result);
+    }
+    return arr;
+}
+```
 
 
 

@@ -1,6 +1,6 @@
 {
   "name": "utils-lodash",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "自定义lodash库的工具方法",
   "keywords": ["utils-lodash","utils","array","object","function","promise","axios"],
   "main": "/dist/utils.main.js",
