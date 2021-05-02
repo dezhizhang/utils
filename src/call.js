@@ -1,4 +1,5 @@
-function call(Fn,obj,...args) {
+//call方法
+export function call(Fn,obj,...args) {
     if(obj === undefined || obj === null) {
         obj = globalThis; //全局对像
     }

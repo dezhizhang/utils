@@ -1,15 +1,15 @@
+import { call } from './call';
 
-
-function call(Fn,obj,...args) {
-    if(obj === undefined || obj === null) {
-        obj = globalThis; //全局对像
-    }
-    //为obj添加临时的方法
-    obj.temp = Fn;
-    //调用temp方法
-    let result = obj.temp(...args);
-    //删除temp
-    delete obj.temp;
-    //返回执行结果
-    return result;
+function add(a,b) {
+    console.log(this);
+    return a + b + this.c;
 }
+
+let obj = {
+    c:521
+}
+window.c = 1;
+// let result = call(add,obj,1,2);
+// console.log({result});
+let result = call(add,null,1,2);
+console.log(result);
