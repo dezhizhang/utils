@@ -1,8 +1,8 @@
 {
-  "name": "z-utils",
-  "version": "1.0.0",
-  "description": "utils",
-  "main": "/dist/",
+  "name": "utils-lodash",
+  "version": "1.0.1",
+  "description": "utils-lodash",
+  "main": "/dist/utils-lodash.main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build":"webpack",
