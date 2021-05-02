@@ -5,17 +5,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry:'./src/index.js',
     context:process.cwd(),
-    mode:'production',
+    mode:'development',
     output:{
         path:path.resolve(__dirname,'dist'),
-        filename:'utils-lodash.main.js',
+        filename:'utils.main.js',
         libraryTarget:'umd',
-        library:'utils-lodash',
+        library:'utils',
     },
     devServer:{
         host:'0.0.0.0',
         port:8082,
-        open:false,
+        open:true,
         contentBase:path.resolve(__dirname,'dist')
     },
     plugins:[
