@@ -426,6 +426,48 @@ export function clone2(target) {
     }
 }
 ```
+### 对像的深考贝
+```
+export function deepClone(target,map = new Map()) {
+  if(target instanceof Array || (target !== null && typeof target === 'object')) {
+    let cloneTarget = map.get(target);
+    if(cloneTarget) {
+        return cloneTarget;
+    }
+    if(target instanceof Array) {
+        cloneTarget = [];
+        map.set(target,cloneTarget);
+        target.forEach((item,index) => {
+            cloneTarget[index] = deepClone(item,map);
+        })
+    }else {
+        cloneTarget = {};
+        map.set(target,cloneTarget);
+        for(let key in target) {
+            if(target.hasOwnProperty(key)) {
+                cloneTarget[key] = deepClone(target[key],map)
+            }
+        }
+    }
+    return cloneTarget;
+  } else {
+      return target;
+  }
+}
+```
+- 使用方法
+``
+let obj = {
+    a:1,
+    b:['e','f','g'],
+    c:{h:{i:2}},
+    d:function() {
+
+        }
+}       
+let deepObj = utils.deepClone(obj);
+console.log(deepObj,deepObj.c === obj.c);
+```
 
 
 

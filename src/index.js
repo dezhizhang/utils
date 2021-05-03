@@ -32,3 +32,4 @@ export { flatten1,flatten2 } from './array/flatten'
 export { newInstance } from './object/newInstance';
 export { mergeObject } from './object/mergeObject';
 export { clone1,clone2 } from './object/clone';
+export { deepClone } from './object/deepClone';
