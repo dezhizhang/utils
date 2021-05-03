@@ -211,6 +211,59 @@ export function some(array,callback) {
     return bool;
 }
 ```
+### 数组的compact方法
+- 过虑数组中所有返回true的方法
+```
+export function compact(array) {
+    let arr = [];
+    for(let i=0;i < array.length;i++) {
+        if(!!array[i]) arr.push(array[i]);
+    }
+    return arr;
+}
+```
+- 使用方法
+```
+let array = [1,undefined,3,false,5,'0'];
+let res = utils.compact(array);
+```
+### 数组的thunk方法
+- 一维数组根据指定的大小生成二级数组
+```
+export function chunk(array,size) {
+    let bigArr = [];
+    let smallArr = [];
+    if(size === 0 || size > array.length || size === undefined){
+        size = array.length;
+    }
+    if(size < 0) {
+        size = 1;
+    }
+
+    for(let i=0;i < array.length;i++) {
+        if(smallArr.length === 1) {
+            bigArr.push(smallArr);
+        }
+        if(smallArr.length === size) {
+            smallArr = [];
+        }
+        smallArr.push(array[i]);
+    }
+    return bigArr;
+
+}
+```
+- 使用方法
+```
+let array = [1,2,3,4,5,6];
+let res = utils.chunk(array,4);
+```
+
+
+
+
+
+
 
 
 

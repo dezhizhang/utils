@@ -11,10 +11,8 @@
     <script>
         console.log('utils-lodash',utils);
 
-        let array = [1,2,3,4,5];
-        let res = utils.some(array,(item,index) => {
-            return item > 2
-        })
+        let array = [1,2,3,4,5,6];
+        let res = utils.chunk(array,4);
         // let res = utils.every(array,(item,index) => {
         //     return item >= 1
         // });
