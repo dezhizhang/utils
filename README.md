@@ -336,6 +336,73 @@ let array3 = [4,8,12];
 let array4 = [2,4,6,8,10];
 let res = utils.mergeArray1(array1,array2,array3,array4);
 ```
+### 数组的pull方法
+- pull删除数组中与value相同的元素，返回所有删除元素
+```
+export function pull(array,...values) {
+    const arr = [];
+    for(let index = 0;index < array.length;index++) {
+        const item = array[index];
+        if(values.indexOf(item) !== -1) {
+            array.splice(index,1);
+            arr.push(item);
+            index--
+        }
+    }    
+    return arr;
+}
+```
+- 测试方法
+```
+let arr = [1,3,5,3,7];
+let res = utils.pull(arr,2,7,3,7);
+console.log('res',res);
+```
+### 数组的drop方法
+```
+export function drop(array,count) {
+    if(array.length === 0) return [];
+    if(count===undefined ||  count <= 0 || count === null) {
+        count = 1;
+    }
+    let arr = [];
+    for(let i=0;i < array.length;i++) {
+       if(i >= count) {
+           arr.push(array[i]);
+       }
+    }
+    return arr;
+}
+
+```
+```
+//dropRight方法
+export function dropRight(array,count) {
+    if(array.length === 0) return [];
+    if(count === undefined || count === null || count <=0) {
+        count = 1
+    }
+    let arr = [];
+    for(let i=0;i < array.length;i++) {
+        if(i < count) {
+            arr.push(array[i])
+        } 
+    }
+    return arr;
+}
+
+```
+- 使用方法
+```
+let arr = [1,3,5,7];
+let res = utils.dropRight(arr,2);
+console.log('res',res)
+```
+
+
+
+
+
 
 
 

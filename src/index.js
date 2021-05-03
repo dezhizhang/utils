@@ -23,5 +23,6 @@ export { compact } from './array/compact';
 export { chunk } from './array/chunk';
 export { difference } from './array/difference';
 export { pull } from './array/pull';
+export { drop,dropRight } from './array/drop';
 export { mergeArray,mergeArray1 } from './array/mergeArray';
 export { flatten1,flatten2 } from './array/flatten'
