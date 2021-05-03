@@ -456,7 +456,7 @@ export function deepClone(target,map = new Map()) {
 }
 ```
 - 使用方法
-``
+```
 let obj = {
     a:1,
     b:['e','f','g'],
@@ -468,6 +468,59 @@ let obj = {
 let deepObj = utils.deepClone(obj);
 console.log(deepObj,deepObj.c === obj.c);
 ```
+### 字符串的倒序reverseString
+```
+export function reverseString(str) {
+    if(typeof str !=='string') return str;
+    let arr = [];
+    for(let i = str.length;i >=0;i--) {
+        arr.push(str[i]);
+    }
+    return arr.join('');
+}
+```
+- 使用方法
+```
+let res = utils.reverseString('abcd');
+```
+### 字符串是否是回文palindrome
+```
+export function palindrome(str) {
+    if(typeof str !== 'string') return str;
+    let arr = [];
+    for(let i= str.length;i >=0;i--) {
+        arr.push(str[i]);
+    }
+    return str === arr.join('');
+}
+```
+- 使用方法
+```
+let res = utils.palindrome('abcba');
+```
+### 字符串超出用...
+```
+export function truncate(str,count) {
+    if(typeof str !== 'string') return str;
+    return str.length > count ? `${str.substring(0,count)}...`:str;
+}
+```
+- 使用方法
+```
+let res = utils.truncate('boomerang',7);
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
