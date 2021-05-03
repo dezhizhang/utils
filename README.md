@@ -117,6 +117,52 @@ export function map(array,callback) {
     return arr;
 }
 ```
+### 数组的reduce方法
+- 返回一个累加的结果
+```
+export function reduce(array,callback,initValue) {
+    let total = initValue;
+    for(let i = 0;i < array.length;i++) {
+        total = callback(total,array[i],i);
+    }
+    return total;
+}
+```
+- reduce的用法
+
+```
+let array = [1,2,3,4,5];
+let res = utils.reduce(array,(total,item,index) =>{
+    return total + item
+},0);
+```
+### 数组的filter方法
+- 过虑数组
+```
+export function filter(array,callback) {
+    const arr = [];
+    for(let i=0;i < array.length;i++) {
+        let bool = callback(array[i],i);
+        if(bool) {
+            arr.push(array[i]);
+        }
+    }
+    return arr;
+} 
+```
+- filter使用方法
+```
+let array = [1,2,3,4,5];
+let res = utils.filter(array,(item,index) => {
+    return item > 2
+});
+```
+
+
+
+
+
+
 
 
 

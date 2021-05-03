@@ -12,8 +12,19 @@
         console.log('utils-lodash',utils);
 
         let array = [1,2,3,4,5];
-        let res = utils.map(array,(item,index) => item * 2);
+      
+
+        let res = utils.filter(array,(item,index) => {
+            return item > 2
+        });
+
         console.log('res',res);
+
+        // console.log('res',res);
+
+        // console.log('res',res);
+        // let res = utils.map(array,(item,index) => item * 2);
+        // console.log('res',res);
         // let array = [1,[2,[3,[4,[5]],]]]
         // let res = utils.flatten2(array);
         // // let array = [1,2,3];
