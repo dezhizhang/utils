@@ -21,4 +21,7 @@ export { every } from './array/every';
 export { some } from './array/some';
 export { compact } from './array/compact';
 export { chunk } from './array/chunk';
+export { difference } from './array/difference';
+export { pull } from './array/pull';
+export { mergeArray,mergeArray1 } from './array/mergeArray';
 export { flatten1,flatten2 } from './array/flatten'

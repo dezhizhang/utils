@@ -258,6 +258,94 @@ export function chunk(array,size) {
 let array = [1,2,3,4,5,6];
 let res = utils.chunk(array,4);
 ```
+### 数组的difference方法
+- 查找一个集合的子集
+```
+export function difference(array1,array2) {
+    const arr = [];
+    if(array1.length === 0) {
+        return arr;
+    }else if(array2.length === 0) {
+        return [...array1];
+    }
+    for(let i=0;i < array1.length;i++) {
+        if(array2.indexOf(array1[i]) === -1) {
+            arr.push(array1[i]);
+        }
+    }
+    return arr;
+}
+```
+- 使用方法
+```
+let array = [1,3,5,7];
+let array1 = [5,8];
+let res = utils.difference(array,array1);
+```
+### 数组合并方法
+- 合并n个数组进行合并，并进行去重
+```
+export function mergeArray(array1,array2) {
+    if(array1.length === 0) {
+        return [...array2];
+    }else if(array2.length === 0) {
+        return [...array1]
+    }
+    let arr = [...array1];
+    for(let i=0;i < array2.length;i++) {
+        if(array1.indexOf(array2[i]) === -1) {
+            arr.push(array2[i]);
+        }
+    }
+    return arr;
+}
+```
+- 使用方法
+```
+let array1 = [1,3,5,7,5];
+let array2 = [1,5,8];
+let res = utils.mergeArray(array1,array2);
+```
+- 支持多个数组的合并
+```
+export function mergeArray1(array1,...arrays) {
+    if(arrays.length === 0) {
+        return [...array1];
+    }
+    let arr = [...array1];
+    let newArrays = [];
+    for(let i=0;i < arrays.length;i++) {
+        for(let j=0;j < arrays[i].length;j++) {
+            newArrays.push(arrays[i][j]); 
+        }
+    }
+    let setArr = [...new Set(newArrays)];
+    for(let i=0;i < setArr.length;i++) {
+        if(array1.indexOf(setArr[i])=== -1) {
+            arr.push(setArr[i]);
+        }
+    }
+    return arr;
+}
+```
+- 使用方法
+```
+let array1 = [1,3,5,7,5];
+let array2 = [1,5,8];
+let array3 = [4,8,12];
+let array4 = [2,4,6,8,10];
+let res = utils.mergeArray1(array1,array2,array3,array4);
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
