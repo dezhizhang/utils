@@ -3,6 +3,7 @@
  * 入口js
  * 向外暴露工具函数
 */
+
 //function方法
 export { apply } from './function/apply';
 export { call } from './function/call';
@@ -26,3 +27,7 @@ export { pull } from './array/pull';
 export { drop,dropRight } from './array/drop';
 export { mergeArray,mergeArray1 } from './array/mergeArray';
 export { flatten1,flatten2 } from './array/flatten'
+
+//object方法
+export { newInstance } from './object/newInstance';
+export { mergeObject } from './object/mergeObject';
