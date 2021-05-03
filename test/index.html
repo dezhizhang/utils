@@ -12,13 +12,23 @@
         console.log('utils-lodash',utils);
 
         let array = [1,2,3,4,5];
-      
-
-        let res = utils.filter(array,(item,index) => {
+        let res = utils.some(array,(item,index) => {
             return item > 2
-        });
-
+        })
+        // let res = utils.every(array,(item,index) => {
+        //     return item >= 1
+        // });
         console.log('res',res);
+        // let res = utils.findIndex(array,(item,index) => {
+        //     return item === 2
+        // });
+        // console.log('res',res);
+
+        // let res = utils.filter(array,(item,index) => {
+        //     return item > 2
+        // });
+
+        // console.log('res',res);
 
         // console.log('res',res);
 

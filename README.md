@@ -157,6 +157,66 @@ let res = utils.filter(array,(item,index) => {
     return item > 2
 });
 ```
+### 数组的findIndex方法
+- 查找数组中某个元素的下标
+```
+export function findIndex(array,callback) {
+    let index = -1;
+    for(let i=0;i < array.length;i++) {
+        let item = array[i]
+        let bool = callback(item,i);
+        if(bool) {
+            index = i
+        }
+    }
+    return index;
+}
+```
+- 使用方法
+```
+let array = [1,2,3,4,5];
+let res = utils.findIndex(array,(item,index) => {
+    return item === 2
+});
+console.log('res',res);
+```
+### 数组的every方法的使用
+- 数组中全部返回true时才返回true
+```
+export function every(array,callback) {
+    for(let i=0;i < array.length;i++) {
+        let bool = callback(array[i],i);
+        if(!bool) return false
+    }
+    return true;
+}
+```
+- 使用方法
+```
+let array = [1,2,3,4,5];
+let res = utils.every(array,(item,index) => {
+    return item >= 1
+});
+console.log('res',res);
+```
+### 数组的some方法的使用
+- 数组中只要有一个返回true就返回true
+```
+export function some(array,callback) {
+    let bool = false;
+    for(let i=0;i < array.length;i++) {
+        bool = callback(array[i],i);
+        if(bool) return true;
+    }
+    return bool;
+}
+```
+
+
+
+
+
+
 
 
 

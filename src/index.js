@@ -15,4 +15,8 @@ export { slice } from './array/slice';
 export { map } from './array/map';
 export { reduce } from './array/reduce';
 export { filter } from './array/filter';
+export { find } from './array/find';
+export { findIndex } from './array/findIndex';
+export { every } from './array/every';
+export { some } from './array/some';
 export { flatten1,flatten2 } from './array/flatten'
