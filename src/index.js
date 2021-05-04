@@ -37,4 +37,5 @@ export { deepClone } from './object/deepClone';
 //string方法
 export { reverseString } from './string/reverseString';
 export { truncate } from './string/truncate';
-export { palindrome } from './string/palindrome'
+export { palindrome } from './string/palindrome';
+export { maxRepeatChar } from './string/maxRepeatChar';

@@ -509,6 +509,34 @@ export function truncate(str,count) {
 ```
 let res = utils.truncate('boomerang',7);
 ```
+### 字符串中出现次数最多的字符
+```
+export function maxRepeatChar(str) {
+    if(typeof str !== 'string') return str;
+    let i = 0;
+    let j = 0;
+    let max = 0;
+    while(i < str.length - 1) {
+        if(str[i] !== str[j]) {
+            if(j - i > max) {
+                max = j - i;
+            }
+            i = j;
+        }
+        j++
+    }
+
+    return max;
+}
+```
+- 使用方法
+```
+let str = 'aaabbbbccccccccdddd';
+let res = utils.maxRepeatChar(str);
+```
+### 相关链接地址
+[github地址](https://github.com/dezhizhang/utils)
+[num包地址](https://www.npmjs.com/package/utils-lodash)
 
 
 
