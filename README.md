@@ -515,24 +515,26 @@ export function maxRepeatChar(str) {
     if(typeof str !== 'string') return str;
     let i = 0;
     let j = 0;
-    let max = 0;
+    let maxCount = 0;
+    let maxChar = '';
     while(i < str.length - 1) {
         if(str[i] !== str[j]) {
-            if(j - i > max) {
-                max = j - i;
+            if(j - i > maxCount) {
+                maxCount = j - i;
+                maxChar = str[i]
             }
             i = j;
         }
         j++
     }
 
-    return max;
+    return {maxCount,maxChar};
 }
 ```
 - 使用方法
 ```
 let str = 'aaabbbbccccccccdddd';
-let res = utils.maxRepeatChar(str);
+let {maxCount,maxChar} = utils.maxRepeatChar(str);
 ```
 ### 相关链接地址
 [github地址](https://github.com/dezhizhang/utils)

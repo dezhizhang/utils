@@ -10,8 +10,9 @@
     <script src="../dist/utils.main.js"></script>
     <script type="text/javascript">
         let str = 'aaabbbbccccccccdddd';
-        let res = utils.maxRepeatChar(str);
-        console.log('res',res);
+        let {maxCount,maxChar} = utils.maxRepeatChar(str);
+        console.log('maxCount',maxCount);
+        console.log('maxChar',maxChar);
     </script>
 </body>
 </html>
