@@ -2,21 +2,27 @@
   "name": "utils-lodash",
   "version": "1.1.0",
   "description": "自定义lodash库的工具方法",
-  "keywords": ["utils-lodash","utils","array","object","function","promise","axios"],
+  "keywords": [
+    "utils-lodash",
+    "utils",
+    "array",
+    "object",
+    "function",
+    "promise",
+    "axios"
+  ],
   "main": "/dist/utils.main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"webpack --watch",
-    "dev":"webpack-dev-server",
-    "start":"npm run build && npm run start"
+    "build": "webpack --watch",
+    "start": "webpack-dev-server && npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dezhizhang/utils.git",
-    "build":"webpack",
-    "start":"webpack-dev-server"
+    "build": "webpack",
+    "start": "webpack-dev-server"
   },
- 
   "author": "zhangdezhi",
   "license": "MIT",
   "bugs": {
@@ -29,6 +35,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "html-webpack-plugin": "^5.3.1"
+    "html-webpack-plugin": "^5.3.1",
+    "lodash": "^4.17.21"
   }
 }
